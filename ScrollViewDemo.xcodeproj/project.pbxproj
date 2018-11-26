@@ -12,6 +12,8 @@
 		4D0919EE21AC2B03003132D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0919EC21AC2B03003132D0 /* Main.storyboard */; };
 		4D0919F021AC2B04003132D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D0919EF21AC2B04003132D0 /* Assets.xcassets */; };
 		4D0919F321AC2B04003132D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0919F121AC2B04003132D0 /* LaunchScreen.storyboard */; };
+		4D0919FB21AC2BAD003132D0 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D0919FA21AC2BAD003132D0 /* 2.png */; };
+		4D0919FD21AC2D35003132D0 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0919FC21AC2D35003132D0 /* View.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4D0919EF21AC2B04003132D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D0919F221AC2B04003132D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D0919F421AC2B04003132D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D0919FA21AC2BAD003132D0 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		4D0919FC21AC2D35003132D0 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				4D0919E821AC2B03003132D0 /* AppDelegate.swift */,
 				4D0919EA21AC2B03003132D0 /* ViewController.swift */,
+				4D0919FA21AC2BAD003132D0 /* 2.png */,
 				4D0919EC21AC2B03003132D0 /* Main.storyboard */,
 				4D0919EF21AC2B04003132D0 /* Assets.xcassets */,
 				4D0919F121AC2B04003132D0 /* LaunchScreen.storyboard */,
 				4D0919F421AC2B04003132D0 /* Info.plist */,
+				4D0919FC21AC2D35003132D0 /* View.xib */,
 			);
 			path = ScrollViewDemo;
 			sourceTree = "<group>";
@@ -123,7 +129,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0919F321AC2B04003132D0 /* LaunchScreen.storyboard in Resources */,
+				4D0919FD21AC2D35003132D0 /* View.xib in Resources */,
 				4D0919F021AC2B04003132D0 /* Assets.xcassets in Resources */,
+				4D0919FB21AC2BAD003132D0 /* 2.png in Resources */,
 				4D0919EE21AC2B03003132D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
