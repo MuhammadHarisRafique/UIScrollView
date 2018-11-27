@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIScrollViewDelegate{
 
     @IBOutlet weak var scrollview: UIScrollView!
+    
+    
+    var pageControl : UIPageControl = UIPageControl(frame:CGRect(x: 50, y: 300, width: 200, height: 50))
     
     var timer = Timer()
     
@@ -37,36 +40,54 @@ class ViewController: UIViewController {
             i += 1
         }
         
+         configurePageControl()
+        
+        
+        
     }
 
     @objc func scrollProgrammatically(){
         
-        self.scrollview.setContentOffset(scrollview.contentOffset, animated: true)
+        //self.scrollview.setContentOffset(scrollview.contentOffset, animated: true)
 //        var a = images.count
 //        var b = Int(scrollview.contentSize.width)
 //        var c = b/a
           //  self.scrollview.setContentOffset(CGPoint(x: c, y: 0), animated: true)
-        self.scrollview.setContentOffset(CGPoint(x: Int(scrollview.contentSize.width)/images.count, y: 0), animated: true)
+       // self.scrollview.setContentOffset(CGPoint(x: Int(scrollview.contentSize.width)/images.count, y: 0), animated: true)
     
-       
+    
+    }
+    
+    func configurePageControl() {
+        // The total number of pages that are available is based on how many available colors we have.
+        self.pageControl.numberOfPages = images.count
+        self.pageControl.currentPage = 0
         
+//        self.pageControl.tintColor = UIColor.red
+//        self.pageControl.pageIndicatorTintColor = UIColor.black
+//        self.pageControl.currentPageIndicatorTintColor = UIColor.green
+        self.pageControl.addTarget(self, action: #selector(self.changePage), for: .valueChanged)
+        
+        self.view.addSubview(pageControl)
         
     }
     
+    // MARK : TO CHANGE WHILE CLICKING ON PAGE CONTROL
+    @objc func changePage(){
         
+        let x = CGFloat(self.pageControl.currentPage) * self.scrollview.frame.size.width
+        self.scrollview.setContentOffset(CGPoint(x: x,y :0), animated: true)
+        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        self.pageControl.currentPage = Int(pageNumber)
+    }
     }
 
 
-extension ViewController:UIScrollViewDelegate{
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-      
-        
-    }
-    
-    
-}
 class CustomView:UIView{
     
     @IBOutlet weak var imageView: UIImageView!
